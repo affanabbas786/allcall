@@ -1,0 +1,91 @@
+.contact-popup {
+    width: 39.375vw;
+    height: 50vw;
+    background: $dark-black;
+    position: fixed;
+    overflow: hidden;
+    right: -100%;
+    top: 0px;
+    z-index: 9999;
+
+    @media(max-width: 1024px) {
+        width: 57.375vw;
+        height: 100vh;
+    }
+
+    @media(max-width: 490px) {
+        width: 90.375vw;
+    }
+
+    .content {
+        position: relative;
+        z-index: 50;
+        overflow: auto;
+        height: 100%;
+        width: 100%;
+        padding: 32px 36px;
+        padding-bottom: 100px;
+
+        @media(max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @media(max-width: 768px) {
+            width: 100%;
+            padding: 24px;
+        }
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+    }
+
+    .link-btn {
+        border-radius: clamp(15px, 1.563vw, 36px);
+        background: rgba(0, 0, 0, 0.5);
+        width: 17.76vw;
+        height: 9.479vw;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+
+        @media(max-width: 490px) {
+            height: 13.479vw;
+        }
+
+        svg {
+            path {
+                transition: $transition;
+            }
+        }
+
+        &:hover {
+            transition: $transition;
+            box-shadow: 3px 3px 1px $accent-3;
+            color: $accent-3;
+
+            svg {
+                path {
+                    transition: $transition;
+                    stroke: $accent-3;
+                }
+            }
+        }
+    }
+}
+
+.bg-layer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: $dark-black;
+    opacity: 0.5;
+    transition: $transition;
+    transform: scale(0);
+    cursor: pointer;
+}

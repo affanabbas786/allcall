@@ -1,0 +1,137 @@
+.testimonials {
+    position: relative;
+    background: $dark-black;
+    padding: 7.396vw 0 6.667vw;
+    overflow: hidden;
+    .testimonials-wrapper {
+        padding-left: 24px;
+        position: relative;
+        z-index: 50;
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        @include media-query(490px){
+            display: grid;
+            padding-left: 12px;
+        }
+
+        .testimonials-slider{
+            .slick-prev{
+                display: none;
+            }
+            .slick-next{
+                display: none;
+            }
+        }
+        .testimonial-block {
+            width: 23.438vw !important;
+            height: auto;
+            margin-right: clamp(16px, 1.25vw, 32px);
+            @include media-query(1024px){
+                width: 32.438vw !important;
+            }
+            @include media-query(820px){
+                width: 39.438vw !important;
+            }
+            @include media-query(490px){
+                width: 63.438vw !important;
+            }
+            
+            .review-box {
+                padding: 1.25vw 1.25vw 3.646vw 1.25vw;
+                border-radius: clamp(15px, 1.563vw, 36px);
+                background: rgba(0, 0, 0, 0.50);
+                margin-bottom: clamp(6px, 0.521vw, 16px);
+                @include media-query(1024px){
+                    padding: 2.25vw 2.25vw 3.646vw 2.25vw;
+                }
+                img {
+                    margin-bottom: clamp(40px, 2.865vw, 60px);
+                }
+                p{
+                    @include media-query(490px){
+                        overflow: hidden;
+                        display: -webkit-box;
+                        -webkit-line-clamp: 5; 
+                        line-clamp: 5; 
+                        -webkit-box-orient: vertical;
+                    }
+                }
+            }
+
+            .name-title {
+                padding: clamp(12px, 0.833vw, 20px);
+                display: flex;
+                align-items: center;
+                gap: clamp(6px, 0.521vw, 16px);
+                border-radius: clamp(15px, 1.563vw, 36px);
+                background: rgba(0, 0, 0, 0.50);
+
+                img {
+                    border-radius: 20px;
+                }
+
+                .person-detail {
+                    
+
+                    .rating-stars {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+
+                        i {
+                            font-size: 18px;
+                            background: linear-gradient(144deg, #FF86F7 17.22%, #A459FF 56.03%, #4F21C2 91.1%);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Slider Arrows
+.slider-arrows {
+    position: relative;
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    @include media-query(490px){
+        flex-direction: row-reverse;
+        justify-content: flex-end;
+
+    }
+    .arrow-btn {
+        width: 134px;
+        height: 134px;
+        background: rgba(0, 0, 0, 0.50);
+        border: 0;
+        border-radius: clamp(15px, 1.563vw, 36px);
+        transition: $transition;
+        @include media-query(1024px){
+            width: 100px;
+            height: 100px;
+        }
+        @include media-query(490px){
+            width: 48px;
+            height: 48px;
+        }
+        cursor: pointer;
+
+        i {
+            color: $white;
+            font-size: 50px;
+            @include media-query(490px){
+                font-size: 21px;
+            }
+        }
+
+        &:hover {
+            background: $accent-3;
+            transition: $transition;
+        }
+    }
+}

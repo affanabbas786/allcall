@@ -1,0 +1,172 @@
+
+
+.cus-btn {
+	color: $white;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 1px solid $white;
+	border-radius: clamp(15px, 0.781vw, 15px);
+	padding: clamp(14px ,0.833vw, 18px) clamp(28px, 1.667vw, 36px);
+  font-family: $font-sec;
+	font-size: clamp(19px, 1.094vw, 25px);
+	font-weight: 700;
+  letter-spacing: 0.022vw;
+	background: transparent;
+	position: relative;
+	transition: all 1s;
+	overflow: hidden;
+  @include media-query(490px){
+    font-size: clamp(16px, 0.75vw, 25px);
+    padding: clamp(12px, 0.833vw, 18px) clamp(20px, 1.667vw, 30px);
+  }
+	&:hover {
+		color: white;
+    border: 1px solid $accent-3;
+		&::before {
+			width: 160%;
+		}
+	}
+	&::before {
+		content: '';
+		position: absolute;
+		height: 100%;
+		width: 0%;
+		top: 0;
+		left: -40px;
+		transform: skewX(45deg);
+		background-color: $accent-3;
+		z-index: -1;
+		transition: all 1s;
+	}
+}
+
+.cus-btn-2 {
+	color: $white;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: 0;
+	border-radius: clamp(15px, 0.781vw, 15px);
+	padding: clamp(14px ,0.833vw, 18px) clamp(28px, 1.667vw, 36px);
+  font-family: $font-sec;
+	font-size: clamp(19px, 1.094vw, 25px);
+	font-weight: 700;
+  letter-spacing: 0.022vw;
+	background: $accent-3;
+	position: relative;
+	transition: all 1s;
+	overflow: hidden;
+  @include media-query(490px){
+    font-size: clamp(16px, 0.75vw, 25px);
+    padding: clamp(12px, 0.833vw, 18px) clamp(20px, 1.667vw, 30px);
+  }
+	&:hover {
+		color: white;
+    background-color: $accent-1;
+	}
+}
+
+
+.close{
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: clamp(16px, 1.094vw, 25px);
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.022vw;
+  color: $white;
+  position: absolute;
+  right: 32px;
+  top: 32px;
+  z-index: 60;
+  transition: $transition;
+  @media(max-width: 490px) {
+    top: 20px;
+    right: 20px;
+  }
+  &:hover{
+    color: $accent-3;
+  }
+} 
+.send-btn{
+  position: relative;
+  text-align: center ;
+  border: none;
+  padding: 0;
+  width: 100%;
+  display: inline-flex;
+  align-items: flex-start;
+  background: transparent;
+  color: $dark-black;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.46px;
+  overflow: visible;
+  transition: $transition;
+  @media (max-width: 490px) {
+    font-size: 12px;
+
+  }
+  .fill-svg{
+    transition: $transition;
+    width: 696px;
+    height: 142px;
+    position: absolute;
+    left: 0;
+    top: 0;
+  
+    @include media-query(492px) {
+        width: 88vw;
+        height: 19vw;
+    }
+    path{
+        fill: $white;
+    }
+  }
+  .outline-svg{
+    position: absolute;
+    left: 8px;
+    top: 8px;
+    width: 700px;
+    height: 146px;
+    z-index: -1;
+    transition: $transition;
+
+    @include media-query(492px) {
+      top: 4px;
+      left: 4px;
+      width: 88.5vw;
+      height: 19.5vw;
+    }
+  }
+  span{
+    transition: $transition;
+    position: relative;
+    z-index: 50;
+    width: 643px;
+    padding: 35px 15px;
+    text-align: center;
+    @include media-query(492px) {
+      width: 80.693878vw;
+      padding: 15px;
+    }
+    
+  }
+     
+  
+  &:hover{
+
+    .outline-svg{
+        top: -2px;
+        left: -2px;
+        @media (max-width: 992px) {
+            top: -1px;
+            left: -1px;
+        }
+
+    }
+
+
+  }
+}

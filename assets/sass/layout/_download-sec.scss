@@ -1,0 +1,80 @@
+.download-sec{
+    position: relative;
+    background: $dark-black;
+   
+    .container-fluid{
+        position: relative;
+        z-index: 50;
+        @media (max-width: 492px) {
+            padding: 6px;
+        }
+    }
+    .download-wrapper{
+        background: url('../media/images/inner-banner.png');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        border-radius: 1.563vw;
+        @media (max-width: 820px) {
+            background-size: cover;
+        }
+        .download-block{
+            .blend-layer{
+                .content-box{
+                    text-align: center;
+                    border-radius: clamp(15px, 1.563vw, 36px);
+                    background: rgba(206, 205, 248, 0.66);
+                    backdrop-filter: blur(25px);
+                    padding: 4.479vw 4.896vw;
+                    margin: 1.25vw;
+                    @include media-query(1299px){
+                        padding: 3.479vw 4.896vw;
+                        margin: 1.25vw;
+                    }
+                    @include media-query(820px){
+                        padding: 1.479vw 3.896vw;
+                    }
+                    @include media-query(490px){
+                        padding: 3.479vw 5.896vw;
+                        margin: 6.25vw;
+                    }
+                    h2{
+                        color: rgba(0, 0, 0, 0.20);
+                        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.20);
+                        -webkit-text-stroke-width: 2px;
+                        -webkit-text-stroke-color: $white;
+                        font-size: 120px;
+                        font-style: normal;
+                        font-weight: 900;
+                        font-size: clamp(80px, 6.25vw, 140px);
+                        letter-spacing: 6px;
+                        @include media-query(1024px) {
+                            font-size: clamp(54px, 5.957vw, 70px);
+                        }
+                        @include media-query(490px) {
+                            font-size: clamp(44px, 4.957vw, 60px);
+                        }
+                    }
+                    .company-logo{
+                        width: 28.344vw;
+                        height: 12.917vw;
+                        @include media-query(1024px) {
+                            width: 23.344vw;
+                            height: 10.917vw;
+                        }
+                    }
+                    .download-bar{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        gap: 30px;
+                        img{
+                            border-radius: clamp(15px, 1.563vw, 36px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

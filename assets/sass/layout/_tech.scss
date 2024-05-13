@@ -1,0 +1,24 @@
+.tech{
+    width: 100vw;
+    position: relative;
+    padding: clamp(12px, 0.625vw, 16px) 0;
+    background: $dark-black;
+    .container-fluid{
+        position: relative;
+        z-index: 50;
+        .tech-content{
+            background: url('../media/images/about-image.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            border-radius: 1.563vw;
+            .text{
+                padding: 15.521vw 0;
+                @include media-query(1399px){
+                    padding: 14.521vw 0;
+                }
+            }
+        }
+    }
+    
+}

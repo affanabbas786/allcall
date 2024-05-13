@@ -1,0 +1,119 @@
+.faqs {
+    position: relative;
+    background: $dark-black;
+
+    .container-fluid {
+        position: relative;
+        z-index: 50;
+
+        @media (max-width: 492px) {
+            padding: 6px;
+        }
+    }
+    
+    .faq-wrapper {
+        .faq-image {
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+
+            img {
+                border-radius: clamp(15px, 1.563vw, 36px);
+                width: 48.125vw;
+                height: 100%;
+                object-fit: cover;
+
+                @media (max-width: 492px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    
+    .faq-block {
+        padding: 24px;
+        padding-right: 26px;
+        border-radius: var(--Radius-L, 20px);
+        background: rgba(0, 0, 0, 0.50);
+        border: none;
+        border-radius: 20px;
+        margin-top: 24px;
+        
+        &.active {
+            background: $accent-3;
+        }
+        
+        .accordion-button {
+            margin: 0;
+            position: relative;
+            padding: 0;
+            font-size: clamp(21px, 1.458vw, 36px);
+            font-family: $font-primary;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            @media (max-width: 492px) {
+                font-size: clamp(17px, 0.458vw, 26px);
+            }
+
+            &.collapsed {
+                border-radius: 0px;
+                padding: 0;
+                background: none;
+                margin: 0;
+
+                &::after {
+                    background-image: none !important;
+                    color: $white;
+                    content: "\f055";
+                    font-family: $font-awesome;
+                    font-size: clamp(24px, 1.615vw, 36px);
+                }
+            }
+
+            &:not(.collapsed) {
+                color: $white;
+                border: none;
+                box-shadow: none;
+            }
+
+            &:focus {
+                border: none;
+                box-shadow: none;
+            }
+
+            &::after {
+                content: "\f056";
+                font-family: $font-awesome;
+                background-image: none !important;
+                position: absolute;
+                right: 0;
+                font-weight: 300;
+                color: $white;
+                font-size: clamp(24px, 1.615vw, 36px);
+                cursor: pointer;
+
+            }
+        }
+
+        .accordion-collapse {
+            width: 39.375vw;
+
+            @include media-query(490px) {
+                width: 100%;
+            }
+            
+            p {
+                margin: 8px 0 0;
+                @include media-query(490px) {
+                    overflow: hidden;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 3;
+                    line-clamp: 6; 
+                    -webkit-box-orient: vertical;
+                }
+            }
+        }
+    }
+
+}

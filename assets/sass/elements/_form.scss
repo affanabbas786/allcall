@@ -1,0 +1,144 @@
+/*-------------------------
+  Form Styling
+-------------------------*/
+.form-group {
+  position: relative;
+}
+.select-range{
+  position: relative;
+  select{
+    option{
+      background: #475055;
+      color: $white;
+      font-size: 22px;
+      font-family: $font-sec;
+      padding: 8px 0;
+      &:hover{
+        background: $accent-1;
+      }
+      &:first-child{
+        border-radius: 10px 10px 0 0;
+      }
+      &:last-child{
+        border-radius: 0px 0px 10px 10px;
+      }
+    }
+  }
+  &::after{
+    content: "\f0d7";
+    font-family: "Font Awesome 5 Pro";
+    position: absolute;
+    right: 40px;
+    top: 34px;
+    font-weight: 700;
+    font-size: 30px;
+    color: #FFFFFF;
+    transition: $transition;
+  }
+}
+
+textarea.form-control{
+  min-height: 142px;
+  max-height: 120px;
+  @media(max-width: 578px) {
+    min-height: 58px;
+    max-height: 58px;
+
+
+  }
+
+}
+.form-label{
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  @media(max-width: 578px) {
+    font-size: 14px;
+  }
+
+  &.bold {
+    font-weight: 700;
+  }
+}
+.form-control {
+  padding: 16px;
+  border-radius: 15px;
+  border: 1px solid $white;
+  background: transparent;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  position: relative;
+  color: $white;
+  box-shadow: none;
+  &.border{
+    border-color: $accent-1!important;
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+    color: $white!important;
+    background: transparent;
+  }
+
+  &:hover{
+    color: $white!important;
+
+  }
+  &::placeholder {
+    color: $medium-gray;
+    opacity: 1;
+  }
+}
+.form-selector{
+  width: 100%;
+  display: block;
+
+  padding: 16px;
+  border-radius: 15px;
+  border: 1px solid $white;
+  background: transparent;
+  font-family: $font-primary;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+  letter-spacing: 0.32px;
+  position: relative;
+  color: $white;
+  box-shadow: none;
+  option{
+    background: $white;
+    color: $dark-black;
+    &:hover{
+      background: $dark-black;
+      color: $white;
+    }
+  }
+
+  &:focus {
+    box-shadow: none;
+    outline: 0;
+    color: $white!important;
+    background: transparent;
+  }
+
+  &:hover{
+    color: $white!important;
+
+  }
+  &::placeholder {
+    color: $medium-gray;
+    opacity: 1;
+  }
+}
+
+label{
+  &.error{
+    color: rgb(255, 0, 0);
+  }
+}

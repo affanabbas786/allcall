@@ -1,0 +1,254 @@
+// Heading
+
+.h-120 {
+  font-family: $font-primary;
+  font-size: clamp(80px, 6.25vw, 140px);
+  font-weight: 900;
+  line-height: 120%;
+  letter-spacing: -0.125vw;
+
+  @include media-query(1024px) {
+    font-size: clamp(54px, 5.957vw, 70px);
+  }
+
+
+  @include media-query(490px) {
+    font-size: clamp(42px, 5.957vw, 50px);
+  }
+}
+
+.h-90 {
+  font-family: $font-primary;
+  font-size: clamp(60px, 4.688vw, 100px);
+  font-weight: 700;
+  line-height: 125%;
+  letter-spacing: -0.047vw;
+
+  @include media-query(1199px) {
+    font-size: clamp(40px, 4.003vw, 50px);
+  }
+
+  @include media-query(490px) {
+    font-size: clamp(22px, 3.003vw, 30px);
+  }
+}
+
+.h-51 {
+  font-family: $font-primary;
+  font-size: clamp(40px, 2.656vw, 58px);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.027vw;
+  
+  @include media-query(490px) {
+    font-size: clamp(32px, 2vw, 46px);
+  }
+
+}
+
+.h-38 {
+  font-family: $font-primary;
+  font-size: clamp(21px, 1.979vw, 46px);
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.02vw;
+  
+  @include media-query(490px) {
+    font-size: clamp(19px, 1vw, 38px);
+  }
+}
+
+.h-28 {
+  font-size: clamp(16px, 1.458vw, 36px);
+  font-weight: 700;
+  line-height: 130%;
+
+  @include media-query(490px) {
+    font-size: clamp(12px, 1.458vw, 24px);
+  }
+}
+
+.h-21 {
+  font-size: clamp(16px, 1.094vw, 25px);
+  font-weight: 700;
+  line-height: 150%;
+  letter-spacing: 0.022vw;
+  
+  @include media-query(1399px) {
+    font-weight: 600;
+    letter-spacing: 0.042vw;
+  }
+
+  @include media-query(490px) {
+    font-size: clamp(14px, 1.094vw, 18px);
+    font-weight: 500;
+    letter-spacing: 0.08vw;
+  }
+}
+
+
+// Text Colors
+.color-primary {
+  color: $accent-1 !important;
+}
+
+.color-sec {
+  color: $accent-2 !important;
+}
+
+.color-ter {
+  color: $accent-3 !important;
+}
+
+.dark-black {
+  color: $dark-black !important;
+}
+
+.white {
+  color: $white !important;
+}
+
+.dark-gray {
+  color: $dark-gray !important;
+}
+
+.medium-gray {
+  color: $medium-gray !important;
+}
+
+.light-gray {
+  color: $light-gray !important;
+}
+
+
+// Gradient Colors
+.accent-gradient {
+  color: linear-gradient(140deg, #7C72EF 20.73%, #A886B7 40.1%, #C49393 65.55%, #ECA36A 90.2%)!important;
+}
+
+
+// Background Colors
+.bg-color-primary {
+  background-color: $accent-1 !important;
+}
+
+.bg-color-sec {
+  background-color: $accent-2 !important;
+}
+
+.bg-color-ter {
+  background-color: $accent-3 !important;
+}
+
+.bg-dark-black {
+  background-color: $dark-black !important;
+}
+
+.bg-white {
+  background-color: $white !important;
+}
+
+.bg-dark-gray {
+  background-color: $dark-gray !important;
+}
+
+.bg-medium-gray {
+  background-color: $medium-gray !important;
+}
+
+.bg-light-gray {
+  background-color: $light-gray !important;
+}
+
+
+
+
+// Radius
+.br-30 {
+  border-radius: 30px;
+
+  @include media-query (992px) {
+    border-radius: 20px;
+  }
+
+  @include media-query (768px) {
+    border-radius: 15px;
+  }
+
+}
+
+.br-30-0 {
+  border-radius: 30px 30px 0 0;
+  overflow: hidden;
+
+  @include media-query (992px) {
+    border-radius: 20px 20px 0 0;
+  }
+
+  @include media-query (768px) {
+    border-radius: 15px 15px 0 0;
+  }
+
+}
+
+.br-25 {
+  border-radius: 25px;
+}
+
+.br-20 {
+  border-radius: 20px;
+}
+
+.br-15 {
+  border-radius: 15px;
+}
+
+.br-10 {
+  border-radius: 10px;
+}
+
+.br-5 {
+  border-radius: 5px;
+}
+
+// Box Shadow classes
+
+
+// ------------- Font Weight -------------- //
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-500 {
+  font-weight: 500;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.fw-800 {
+  font-weight: 800;
+}
+
+// Font Family
+.font-primary{
+ font-family: $font-primary;
+}
+.font-sec{
+  font-family: $font-sec;
+}
+.body-text{
+  font-family: $body-text;
+}
+
+
+// Mix helper classes
+.b-unstyle {
+  border: 0;
+  background: transparent;
+}

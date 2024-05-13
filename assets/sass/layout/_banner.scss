@@ -1,0 +1,281 @@
+.banner {
+    width: 100vw;
+    position: relative;
+    background: $dark-black;
+
+    .content {
+        padding-top: 5.833vw;
+        position: relative;
+        z-index: 100;
+
+        @media (max-width: 1499px) {
+            padding-top: 3.833vw;
+        }
+        @media (max-width: 820px) {
+            padding: 5.5vw 0;
+        }
+
+        .text-block {
+            @media (max-width: 992px) {
+                text-align: center;
+            }
+
+            h2 {
+                line-height: 105%;
+                .gradient-text {
+                    background: linear-gradient(144deg, #FF86F7 17.22%, #A459FF 56.03%, #4F21C2 91.1%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                }
+            }
+
+            p {
+                br {
+                    @media (max-width: 578px) {
+                        display: none;
+                    }
+
+                }
+            }
+
+            .btn-block {
+                display: flex;
+                align-items: center;
+                gap: 1.25vw;
+
+                @media (max-width: 992px) {
+                    justify-content: center;
+                }
+
+                @media (max-width: 492px) {
+                    gap: 10px;
+                }
+
+
+            }
+        }
+        .banner-download-tag{
+            display: flex;
+            justify-content: end;
+            @include media-query(820px){
+                justify-content: center;
+                margin-top: 24px;
+            }
+            .banner-tag{
+                width: 10.781vw;
+                height: 10.573vw;
+                border-radius: clamp(15px, 1.563vw, 36px);
+                padding: 19px 20px 35px 21px;
+                background: linear-gradient(144deg, #FF86F7 17.22%, #A459FF 56.03%, #4F21C2 91.1%), #5D2ACC;
+                @include media-query(1399px){
+                    padding: 12px;
+                }
+                @include media-query(820px){
+                    width: 23.781vw;
+                    height: 11.573vw;
+                }
+                @include media-query(490px){
+                    width: 25.781vw;
+                    height: 15.573vw;
+                    padding: 4px;
+                    display: grid;
+                    align-items: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    .banner-image-block {
+        position: relative;
+        z-index: 50;
+        padding: 1.25vw 0;
+        width: 100%;
+        text-align: end;
+
+        @include media-query(1399px){
+            padding: 2vw 0;
+        }
+        @include media-query(1024px){
+            height: 100%;
+            padding: 2vw 0 0;
+            text-align: center;
+        }
+        @include media-query(490px){
+            padding: 0;
+        }
+        img {
+            border-radius: clamp(30px, 1.563vw, 40px);
+            width: 96%;
+            height: 45%;
+            @include media-query(1024px){
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+            @include media-query(820px){
+                width: 73%;
+            }
+            @include media-query(490px){
+                width: 80%;
+            }
+        }
+    }
+
+}
+
+.dotted {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../media/vector/banner-texture-2.png);
+    mix-blend-mode: overlay;
+    background-size: 100%;
+    background-position: top left;
+    z-index: 12;
+}
+
+.blur {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 11;
+
+    .animate-1 {
+        position: absolute;
+        top: -6%;
+        left: -14%;
+        animation: animate1 60s linear infinite alternate;
+
+        @media (max-width: 490px) {
+            width: 200px;
+            height: 258px;
+        }
+
+    }
+
+    .animate-2 {
+        position: absolute;
+        bottom: -23%;
+        left: 28%;
+        animation: animate2 70s linear infinite alternate;
+
+        @media (max-width: 490px) {
+            width: 140px;
+            height: 168px;
+        }
+    }
+
+    .animate-3 {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        animation: animate3 65s linear infinite alternate;
+
+        @media (max-width: 490px) {
+            width: 180px;
+            height: 210px;
+        }
+    }
+}
+
+@keyframes animate1 {
+    0% {
+        left: -14%;
+        top: -9%;
+    }
+
+    20% {
+        left: 0%;
+        top: 32%;
+    }
+
+    40% {
+        left: 10%;
+        top: 70%;
+    }
+
+    60% {
+        left: 50%;
+        top: 0%;
+    }
+
+    80% {
+        left: 95%;
+        top: 80%;
+    }
+
+    100% {
+        left: 0%;
+        top: 0%;
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        right: 0%;
+        bottom: 0%;
+    }
+
+    20% {
+        right: 45%;
+        bottom: 20%;
+    }
+
+    40% {
+        right: 10%;
+        bottom: 70%;
+    }
+
+    60% {
+        right: 50%;
+        bottom: 0%;
+    }
+
+    80% {
+        right: 95%;
+        bottom: 80%;
+    }
+
+    100% {
+        right: 0%;
+        bottom: 0%;
+    }
+}
+
+@keyframes animate3 {
+
+    0% {
+        left: 0%;
+        bottom: 0%;
+    }
+
+    20% {
+        left: 0%;
+        bottom: 90%;
+    }
+
+    40% {
+        left: 90%;
+        bottom: 5%;
+    }
+
+    60% {
+        left: 50%;
+        bottom: 0%;
+    }
+
+    80% {
+        left: 50%;
+        bottom: 97%;
+    }
+
+    100% {
+        left: 110%;
+        bottom: 105%;
+    }
+}

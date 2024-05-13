@@ -1,0 +1,135 @@
+/*---------------------------------------------"
+// Template Name: AR App
+// Template URL: https://techpedia.co.uk/template/ar-app-landing
+// Description:  AR App Html Template
+// Version: 1.0.0
+
+===============================================   
+STYLE SHEET INDEXING
+|
+|___ Fonts
+|___ Variables
+|___ Responsive
+|___ Reset Styles
+|___ Spacing
+|___ Helper Classes
+|___ Buttons
+|___ Headings
+|___ Layout Styles
+|___ END STYLE SHEET INDEXING
+
+--------------------------------------------*/
+
+/*-------------------------
+    Fonts
+-------------------------*/
+
+//// Saira Condensed
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+//// Saira Extra Condensed
+@import url('https://fonts.googleapis.com/css2?family=Saira+Extra+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+////Inter Font
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+/*-------------------------
+    Variables
+-------------------------*/
+/* Fonts */
+$font-primary: "Saira Semi Condensed", 'sans-serif';
+$font-sec: "Saira Extra Condensed", 'sans-serif';
+$body-text:  "Inter", 'sans-serif';
+$font-awesome: "Font Awesome 5 Pro";
+
+/* Colors */
+$accent-1: #FD85F7;
+$accent-2: #AB5CFE;
+$accent-3: #5D2ACC;
+
+$dark-black: #0D0D0C;
+$white: #FFFCFA;
+$dark-gray: #817F7E;
+$medium-gray: #A4A3A2;
+$light-gray: #CDCCCB;
+
+
+/* Transitions */
+$transition: all .5s ease-in-out;
+
+/* Gradients */
+    $accent-gradient: linear-gradient(140deg, #7C72EF 20.73%, #A886B7 40.1%, #C49393 65.55%, #ECA36A 90.2%);
+    $gradient-sec: linear-gradient(99deg, #FF8946 -4.71%, #FF5C00 93.14%);
+
+/* Shadows */
+
+.image{
+    background: url(../media/vector/star.png)
+}
+
+/*-------------------------
+    Responcive Styles
+-------------------------*/
+@import "helpers/mixin";
+
+/*-------------------------
+    Reset Styles
+-------------------------*/
+@import "basic/basic";
+
+/*-------------------------
+Helpers
+-------------------------*/
+@import "helpers/classes";
+
+
+@import "helpers/spacing";
+
+/*-------------------------
+Elements
+-------------------------*/
+
+@import "elements/buttons";
+
+@import "elements/form";
+
+@import "elements/heading";
+
+@import "elements/modal";
+
+@import "elements/preloader";
+
+/*-------------------------
+  layouts
+-------------------------*/
+@import "layout/header";
+
+@import "layout/footer";
+
+@import "layout/banner";
+
+@import "layout/tech"; 
+
+@import "layout/features"; 
+
+@import "layout/achievement"; 
+
+@import "layout/download-sec";
+
+@import "layout/testimonial"; 
+
+@import "layout/faq"; 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
